@@ -107,7 +107,7 @@ public class UserServiceImpl implements UserService {
                 .getPhones()
                 .stream()
                 .map(PhoneDTO::buildFromPhone)
-                .toList()).orElseGet(List::of);
+                .toList()).orElseThrow(() -> new EmailNotExistException("User not exist"));
     }
 
 
