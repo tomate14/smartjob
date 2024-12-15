@@ -26,3 +26,6 @@ After that, you have to register the user, and after that you can use another ap
 ## Considerations
 * Email has a validation to check @dominio.cl
 * Password has a regex checking at least 4 letters and 4 numbers.
+
+## Password in application.properties
+* It is not a valid way to do it. In prod case, the password should be taken from Secret Manager or another place without webexposition. I did it because it is the easiest way to run database in challenge 
